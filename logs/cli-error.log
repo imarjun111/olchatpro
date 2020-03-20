@@ -1,0 +1,623 @@
+2020-02-20 13:27:01 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'caketest.admin' doesn't exist in /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 132
+Stack Trace:
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'admin', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(62): Cake\Database\Schema\Collection->describe('admin', Array)
+#2 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/ORM/Table.php(559): Cake\Database\Schema\CachedCollection->describe('admin')
+#3 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/ORM/Table.php(684): Cake\ORM\Table->getSchema()
+#4 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'admin', 'Admin')
+#7 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Admin')
+#8 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/Shell.php(531): Bake\Shell\Task\ModelTask->main('Admin')
+#9 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#11 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 /var/www/html/cakenewtest/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'caketest.admin' doesn't exist in /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 38
+Stack Trace:
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'admin', Array, Object(Cake\Database\Schema\TableSchema))
+#9 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(62): Cake\Database\Schema\Collection->describe('admin', Array)
+#10 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/ORM/Table.php(559): Cake\Database\Schema\CachedCollection->describe('admin')
+#11 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/ORM/Table.php(684): Cake\ORM\Table->getSchema()
+#12 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'admin', 'Admin')
+#15 /var/www/html/cakenewtest/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Admin')
+#16 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/Shell.php(531): Bake\Shell\Task\ModelTask->main('Admin')
+#17 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#19 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 /var/www/html/cakenewtest/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2020-03-11 08:11:52 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 08:15:15 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 08:15:38 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 08:15:57 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 08:16:05 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 08:23:24 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 09:04:08 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 09:04:17 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(49): include_once('/var/www/html/c...')
+#2 phar:///var/www/html/cakenewtest/phpunit/phpunit/Util/FileLoader.php(40): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(651): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(528): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(72): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 phar:///var/www/html/cakenewtest/phpunit/phpunit/TextUI/Command.php(65): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/phpunit(651): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 09:56:31 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(1087): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(884): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 09:57:03 Error: [Error] Call to undefined function addPlugin() in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(1087): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(884): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 09:57:17 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 213
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(1087): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(884): PHPUnit\TextUI\Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#8 {main}
+
+
+2020-03-11 10:02:30 Error: [ParseError] syntax error, unexpected '/', expecting ',' or ';' in /var/www/html/cakenewtest/tests/TestCase/Controller/Admin/AdminsControllerTest.php on line 4
+Stack Trace:
+#0 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(39): PHPUnit\Util\FileLoader::checkAndLoad('tests/TestCase/...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(141): PHPUnit\Runner\StandardTestSuiteLoader->load('tests/TestCase/...', 'tests/TestCase/...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(102): PHPUnit\Runner\BaseTestRunner->loadSuiteClass('tests/TestCase/...', '')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(177): PHPUnit\Runner\BaseTestRunner->getTest('tests/TestCase/...', '', Array)
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#7 {main}
+
+
+2020-03-11 10:02:58 Error: [ParseError] syntax error, unexpected '/', expecting '{' in /var/www/html/cakenewtest/tests/TestCase/Controller/Admin/AdminsControllerTest.php on line 13
+Stack Trace:
+#0 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/html/c...')
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(39): PHPUnit\Util\FileLoader::checkAndLoad('tests/TestCase/...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(141): PHPUnit\Runner\StandardTestSuiteLoader->load('tests/TestCase/...', 'tests/TestCase/...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(102): PHPUnit\Runner\BaseTestRunner->loadSuiteClass('tests/TestCase/...', '')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(177): PHPUnit\Runner\BaseTestRunner->getTest('tests/TestCase/...', '', Array)
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#7 {main}
+
+
+2020-03-11 10:11:09 Error: Fatal Error (1): Class 'Cake\TestSuite\Assert' not found in [/var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/TestCase.php, line 36]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 238
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 108
+[main] - [internal], line ??
+
+
+
+2020-03-11 10:11:09 Error: [Cake\Error\FatalErrorException] Class 'Cake\TestSuite\Assert' not found in /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/TestCase.php on line 36
+Stack Trace:
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(108): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\\Tes...', '/var/www/html/c...', 36)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2020-03-11 11:22:30 Error: [Cake\Http\Exception\NotFoundException] Not Found (/var/www/html/cakenewtest/src/Controller/PagesController.php:69)
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Controller/Controller.php(609): App\Controller\PagesController->display('not_existing')
+#1 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#3 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(162): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(201): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#14 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestTrait.php(535): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#15 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestTrait.php(415): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#16 /var/www/html/cakenewtest/tests/TestCase/Controller/PagesControllerTest.php(65): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#17 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplate()
+#18 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(1062): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#19 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(913): PHPUnit_Framework_TestCase->runTest()
+#20 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestResult.php(686): PHPUnit_Framework_TestCase->runBare()
+#21 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(868): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#22 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#23 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(517): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#25 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(186): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#26 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#27 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#28 {main}
+Request URL: /pages/not_existing
+
+
+2020-03-11 11:22:30 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages/not_existing.ctp" is missing. (/var/www/html/cakenewtest/vendor/cakephp/cakephp/src/View/View.php:1583)
+Exception Attributes: array (
+  'file' => 'Pages/not_existing.ctp',
+)
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/View/View.php(875): Cake\View\View->_getViewFileName('Pages/not_exist...')
+#1 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Controller/Controller.php(795): Cake\View\View->render('not_existing', NULL)
+#2 /var/www/html/cakenewtest/src/Controller/PagesController.php(64): Cake\Controller\Controller->render('not_existing')
+#3 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Controller/Controller.php(609): App\Controller\PagesController->display('not_existing')
+#4 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#5 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#6 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(162): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(201): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#17 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestTrait.php(535): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#18 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestTrait.php(415): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#19 /var/www/html/cakenewtest/tests/TestCase/Controller/PagesControllerTest.php(79): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#20 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplateInDebug()
+#21 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(1062): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#22 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(913): PHPUnit_Framework_TestCase->runTest()
+#23 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestResult.php(686): PHPUnit_Framework_TestCase->runBare()
+#24 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(868): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#25 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#26 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#27 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(517): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#28 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(186): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#29 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#30 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#31 {main}
+Request URL: /pages/not_existing
+
+
+2020-03-11 11:22:30 Error: [Cake\Http\Exception\ForbiddenException] Forbidden (/var/www/html/cakenewtest/src/Controller/PagesController.php:51)
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Controller/Controller.php(609): App\Controller\PagesController->display('..', 'Layout', 'ajax')
+#1 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#3 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(162): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Http/Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/MiddlewareDispatcher.php(201): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#14 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestTrait.php(535): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#15 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/IntegrationTestTrait.php(415): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/../Layou...', 'GET')
+#16 /var/www/html/cakenewtest/tests/TestCase/Controller/PagesControllerTest.php(94): Cake\TestSuite\IntegrationTestCase->get('/pages/../Layou...')
+#17 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDirectoryTraversalProtection()
+#18 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(1062): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#19 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(913): PHPUnit_Framework_TestCase->runTest()
+#20 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestResult.php(686): PHPUnit_Framework_TestCase->runBare()
+#21 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(868): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#22 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#23 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#24 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(517): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#25 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(186): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#26 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#27 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#28 {main}
+Request URL: /pages/../Layout/ajax
+
+
+2020-03-12 08:34:23 Error: [TypeError] Argument 1 passed to PHPUnit\TextUI\TestRunner::doRun() must be an instance of PHPUnit\Framework\Test, instance of PHPUnit\Framework\TestSuite given, called in /usr/share/php/PHPUnit/TextUI/Command.php on line 195 in /usr/share/php/PHPUnit/TextUI/TestRunner.php on line 185
+Stack Trace:
+#0 /usr/share/php/PHPUnit/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#1 /usr/share/php/PHPUnit/TextUI/Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#2 /usr/bin/phpunit(34): PHPUnit\TextUI\Command::main()
+#3 {main}
+
+
+2020-03-12 10:33:21 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Model\Table\ArticlesTableTest" test case. SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php on line 380
+Stack Trace:
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestResult.php(386): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestResult.php(628): PHPUnit_Framework_TestResult->startTest(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(868): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(517): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(186): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#8 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#9 {main}
+
+
+Caused by: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Driver.php on line 92
+Stack Trace:
+#0 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Driver.php(92): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Driver.php(179): Cake\Database\Driver\Mysql->connect()
+#3 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Connection.php(485): Cake\Database\Driver->beginTransaction()
+#4 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Connection.php(486): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/Database/Connection.php(734): Cake\Database\Connection->begin()
+#7 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php(414): Cake\Database\Connection->transactional(Object(Closure))
+#8 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php(355): Cake\TestSuite\Fixture\FixtureManager->_runOperation(Array, Object(Closure))
+#9 /var/www/html/cakenewtest/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#10 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestResult.php(386): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#11 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestResult.php(628): PHPUnit_Framework_TestResult->startTest(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#12 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestCase.php(868): PHPUnit_Framework_TestResult->run(Object(App\Test\TestCase\Model\Table\ArticlesTableTest))
+#13 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Framework/TestSuite.php(733): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#14 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(517): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#15 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(186): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#16 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#17 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#18 {main}
+
+
+2020-03-13 06:51:28 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 06:53:45 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 06:53:51 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 06:54:10 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 213
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 07:23:14 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 07:23:53 Error: [Error] Call to undefined function addPlugin() in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 07:24:10 Error: [Error] Call to undefined method Cake\Core\Plugin::addPlugin() in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 07:25:23 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 07:27:07 Error: [Error] Class 'Application' not found in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:08:25 Error: [Error] Class 'Application' not found in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:08:42 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:16:36 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:18:06 Error: [Error] Function name must be a string in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:18:40 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:20:22 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:21:34 Error: [Error] Call to a member function addPlugin() on null in /var/www/html/cakenewtest/config/bootstrap.php on line 210
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-13 13:22:33 Error: [Error] Call to a member function addPlugin() on null in /var/www/html/cakenewtest/config/bootstrap.php on line 211
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-16 04:14:25 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 213
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
+2020-03-16 04:15:59 Error: [Error] Using $this when not in object context in /var/www/html/cakenewtest/config/bootstrap.php on line 213
+Stack Trace:
+#0 /var/www/html/cakenewtest/tests/bootstrap.php(10): require()
+#1 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(52): include_once('/var/www/html/c...')
+#2 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/Util/Fileloader.php(36): PHPUnit_Util_Fileloader::load('/var/www/html/c...')
+#3 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(914): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/html/c...')
+#4 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(739): PHPUnit_TextUI_Command->handleBootstrap('/var/www/html/c...')
+#5 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(127): PHPUnit_TextUI_Command->handleArguments(Array)
+#6 /var/www/html/cakenewtest/vendor/phpunit/phpunit/src/TextUI/Command.php(116): PHPUnit_TextUI_Command->run(Array, true)
+#7 /var/www/html/cakenewtest/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#8 {main}
+
+
